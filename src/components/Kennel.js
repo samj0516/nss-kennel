@@ -1,9 +1,9 @@
 import React from "react"
 // import { AnimalCard } from "./animal/AnimalCard"
 import "./animal/Animal.css"
-import { EmployeeCard } from './employee/EmployeeCard'
-import { LocationCard } from './location/LocationCard'
-import { CustomerCard } from './customer/CustomerCard'
+// import { EmployeeCard } from './employee/EmployeeCard'
+// import { LocationCard } from './location/LocationCard'
+// import { CustomerCard } from './customer/CustomerCard'
 // import { PropsAndState } from './PropsAndState'
 import { NavBar } from './nav/NavBar'
 import { ApplicationViews } from './ApplicationViews'
