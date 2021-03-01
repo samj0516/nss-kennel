@@ -7,6 +7,8 @@ import { CustomerProvider } from './customer/CustomerProvider'
 import { CustomerList } from './customer/CustomerList'
 import { EmployeeProvider } from './employee/EmployeeProvider'
 import { EmployeeList } from './employee/EmployeeList'
+import { LocationProvider } from './location/LocationProvider'
+import { LocationList } from './location/LocationList'
 
 export const ApplicationViews = () => {
     return (
@@ -40,15 +42,18 @@ export const ApplicationViews = () => {
                     <EmployeeList />
                 </Route>
             </EmployeeProvider>
-            
+
+            <LocationProvider>
+                <Route path="/locations">
+                <h2>Locations</h2>
+                    <LocationList />
+                </Route>
+            </LocationProvider>
         </>
     )
 }
 
 
-// <Route path="/locations">
-// <LocationCard />
-// </Route>
 
 
 
