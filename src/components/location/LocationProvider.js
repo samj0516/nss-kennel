@@ -4,7 +4,7 @@ import React, { useState, createContext } from "react"
 export const LocationContext = createContext()
 
 // This component establishes what data can be used.
-export const EmployeeProvider = (props) => {
+export const LocationProvider = (props) => {
     const [locations, setLocations] = useState([])
 
     const getLocations = () => {
