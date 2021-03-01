@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react"
+import { useHistory } from 'react-router-dom'
 import { AnimalContext } from "./AnimalProvider"
 import { LocationContext } from '../location/LocationProvider'
 import { CustomerContext } from '../customer/CustomerProvider'
@@ -20,8 +21,13 @@ export const AnimalList = () => {
 
   }, [])
 
+  const history = useHistory()
   
   return (
+    <>
+    	<button onClick={() => {history.push("/animals/create")}}>
+            Add Animal
+        </button>
     <div className="animals">
       {console.log("AnimalList: Render", animals)}
       {
@@ -35,5 +41,6 @@ export const AnimalList = () => {
         })
       }
     </div>
+    </>
   )
 }
