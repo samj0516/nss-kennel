@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react"
+import { useHistory } from 'react-router-dom'
 import { LocationContext } from "./LocationProvider"
 import { LocationCard } from "./LocationCard"
 import "./Location.css"
@@ -14,15 +15,20 @@ export const LocationList = () => {
 
   }, [])
 
-  
+  const history = useHistory()
   return (
+    <>
+      <button onClick={() => {history.push("/locations/create")}}>
+        Open New Location
+    </button>
     <div className="locations">
-      {/* {console.log("AnimalList: Render", animals)} */}
+      
       {
         locations.map(location => {
           return <LocationCard key={location.id} location={location} />
         })
       }
     </div>
+    </>
   )
 }
