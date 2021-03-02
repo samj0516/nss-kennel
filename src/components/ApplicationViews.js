@@ -11,6 +11,7 @@ import { EmployeeList } from './employee/EmployeeList'
 import { EmployeeForm } from './employee/EmployeeForm'
 import { LocationProvider } from './location/LocationProvider'
 import { LocationList } from './location/LocationList'
+import { LocationForm } from './location/LocationForm'
 
 export const ApplicationViews = () => {
     return (
@@ -57,9 +58,13 @@ export const ApplicationViews = () => {
             </LocationProvider>
 
             <LocationProvider>
-                <Route path="/locations">
+                <Route exact path="/locations">
                     <h2>Locations</h2>
                     <LocationList />
+                </Route>
+                <Route exact path="/locations/create">
+                    <h2>Add a Location</h2>
+                    <LocationForm />
                 </Route>
             </LocationProvider>
         </>
