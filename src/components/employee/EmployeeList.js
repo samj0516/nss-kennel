@@ -26,7 +26,7 @@ export const EmployeeList = () => {
           <div className="employees">
       {
         employees.map(employee => {
-          const clinic = locations.find(l => l.id === employee.locationId)
+          const clinic = locations.find(l => l.id === employee.location_id)
           return <EmployeeCard key={employee.id} employee={employee} location={clinic} />
         })
       }

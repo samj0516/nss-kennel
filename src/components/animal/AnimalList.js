@@ -46,8 +46,8 @@ export const AnimalList = () => {
       {console.log("AnimalList: Render", animals)}
       {
         filteredAnimals.map(animal => {
-          const owner = customers.find(c => c.id === animal.customerId)
-          const clinic = locations.find(l => l.id === animal.locationId)
+          const owner = customers.find(c => c.id === animal.customer_id)
+          const clinic = locations.find(l => l.id === animal.location_id)
           return <AnimalCard key={animal.id} 
                             location={clinic}
                             customer={owner}
