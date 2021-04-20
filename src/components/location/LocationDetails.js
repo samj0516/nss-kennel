@@ -19,8 +19,8 @@ export const LocationDetail = () => {
     })
     }, [])
 
-    const locationEmployees = location.employees?.map(e => (<div key={e.id}>{e.name}</div> ))
-    const locationAnimals = location.animals?.map(a => (<div key={a.id}>{a.name}</div> ))
+    const locationEmployees = location.employees?.map(e => (<div key={e.employee_id}>{e.employee_name}</div> ))
+    const locationAnimals = location.animals?.map(a => (<div key={a.animal_id}>{a.animal_name}</div> ))
 
   return (
     <section className="animal">
